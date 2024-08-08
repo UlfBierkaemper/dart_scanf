@@ -30,7 +30,7 @@ void main() {
 
 ## Notes
 
-Being an old-fashioned C programmer, I have been using "scanf"-like functions all my life.
+Being an old-fashioned C programmer, I have been using *scanf*-like functions all my life.
 
 When I got into *Dart/Flutter*, I started to love this language and concepts more and more.
 But regular expressions *(RegEx)* are still unlearnable for people like me,
