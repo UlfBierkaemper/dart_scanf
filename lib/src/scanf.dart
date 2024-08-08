@@ -53,6 +53,7 @@ class ScanF {
         getCh();
       }
       while (c >= 0) {
+        // TODO: c > 0 ? (FixMe!)
         int l = c;
         chars.add(c);
         getCh();
