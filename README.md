@@ -11,8 +11,8 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-A "scanf"-like implementation in pure dart. For maximum speed, the pattern is
-"compiled" into a list of scanners, which can perform very fast.
+A *scanf*-like implementation in pure *Dart*. For maximum speed, the pattern is
+compiled into a list of scanners, which can perform very fast.
 
 ## Features
 
