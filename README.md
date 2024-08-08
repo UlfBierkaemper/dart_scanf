@@ -11,29 +11,32 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A "scanf"-like implementation in pure dart. For maximum speed, the pattern is
+"compiled" into a list of scanners, which can perform very fast.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+A very short example, how to use this package:
 
-## Getting started
+```Dart
+import 'package:scanf/scanf.dart';
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+void main() {
+  final scanf = ScanF('Pi: %f, Int=%i, Octal=%o %[^:]:%f%%, %[a-c]%s');
+  final result = scanf.match('Pi: 3.14, Int=0xCAFEBABE, Octal=755 Progress:34.2%, abcdef');
+  print('$result');
+}
 ```
 
-## Additional information
+## Notes
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Being an old-fashioned C programmer, I have been using "scanf"-like functions all my life.
+
+When I got into *Dart/Flutter*, I started to love this language and concepts more and more.
+But regular expressions *(RegEx)* are still unlearnable for people like me,
+so I looked around for a scanf-like implementation in *Dart*.
+
+Surprisingly, I couldn't find anything. When I started a small project with *rsync*, the need for a
+"stdout" parser arose.
+
+With this package I was able to process the output of *rsync* without any problems, crateing a usable progress display.
