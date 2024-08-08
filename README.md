@@ -34,9 +34,9 @@ Being an old-fashioned C programmer, I have been using *scanf*-like functions al
 
 When I got into *Dart/Flutter*, I started to love this language and concepts more and more.
 But regular expressions *(RegEx)* are still unlearnable for people like me,
-so I looked around for a scanf-like implementation in *Dart*.
+so I looked around for a *scanf*-like implementation in *Dart*.
 
 Surprisingly, I couldn't find anything. When I started a small project with *rsync*, the need for a
 "stdout" parser arose.
 
-With this package I was able to process the output of *rsync* without any problems, crateing a usable progress display.
+With this package I was able to process the output of *rsync* without any problems, crating a usable progress display.
