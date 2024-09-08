@@ -125,7 +125,8 @@ class ScanF {
 
         case codeCapitalE:
         case codeLowerCaseE:
-          specs.add(RealScanner(scientific: true, width: width, ignore: ignore));
+          specs
+              .add(RealScanner(scientific: true, width: width, ignore: ignore));
           getCh();
           return true;
 
