@@ -13,9 +13,4 @@ class WhiteSpaceScanner extends Scanner {
     }
     return true;
   }
-
-  @override
-  String toString() {
-    return '$runtimeType';
-  }
 }

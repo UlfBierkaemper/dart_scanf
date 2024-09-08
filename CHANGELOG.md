@@ -1,3 +1,7 @@
+## 1.1.3
+
+* Code coverage improved
+
 ## 1.1.2
 
 * Negative flag fix

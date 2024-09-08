@@ -143,8 +143,7 @@ class ScanF {
 
         case codeCapitalE:
         case codeLowerCaseE:
-          specs
-              .add(RealScanner(scientific: true, width: width, ignore: ignore));
+          specs.add(RealScanner(scientific: true, width: width, ignore: ignore));
           getCh();
           return true;
 
@@ -212,5 +211,14 @@ class ScanF {
       }
     }
     return matches;
+  }
+
+  @override
+  String toString() {
+    final text = StringBuffer();
+    for (final spec in specs) {
+      text.writeln(spec);
+    }
+    return text.toString();
   }
 }

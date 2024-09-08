@@ -9,4 +9,9 @@ abstract class Scanner {
   /// Scans characters and adds matches to "matches".
   /// Returns true if a match is found.
   bool scan(CharGet chars, List matches);
+
+  @override
+  String toString() {
+    return '$runtimeType';
+  }
 }
