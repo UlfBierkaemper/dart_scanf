@@ -12,7 +12,7 @@ class CharGet {
   /// Gets the next character from the input text string
   int get ch => _ch;
 
-  /// Number of remainig characters of the input text
+  /// Number of remaining characters of the input text
   int get remaining => text.length - _index;
 
   /// Constructor with input text
@@ -20,7 +20,7 @@ class CharGet {
     getCh();
   }
 
-  /// Advances the imaginary "cursor" to the nech character
+  /// Advances the imaginary "cursor" to the next character
   void getCh() {
     if (_index < text.length) {
       _ch = text.codeUnitAt(_index++);

@@ -17,6 +17,7 @@ and the Flutter guide for
 [![GitHub Stars](https://img.shields.io/github/stars/UlfBierkaemper/dart_scanf.svg)](https://github.com/UlfBierkaemper/dart_scanf/stargazers)
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/UlfBierkaemper/dart_scanf/main/LICENSE)
 [![Build Status](https://github.com/UlfBierkaemper/dart_scanf/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/UlfBierkaemper/dart_scanf/actions)
+[![Code Coverage](https://codecov.io/gh/UlfBierkaemper/dart_scanf/branch/main/graph/badge.svg?token=2yW74MVgun)](https://codecov.io/gh/UlfBierkaemper/dart_scanf)
 
 A *scanf*-like implementation in pure *Dart*. For maximum speed, the pattern is
 compiled into a list of scanners, which can perform very fast.

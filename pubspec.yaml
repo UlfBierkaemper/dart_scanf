@@ -1,6 +1,6 @@
 name: scanf
 description: "A scanf-like scanner as an alternative to regular expressions."
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/UlfBierkaemper/dart_scanf
 
 environment:
