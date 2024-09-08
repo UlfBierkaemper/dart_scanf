@@ -1,6 +1,10 @@
 part of '../scanf.dart';
 
+/// Character scanner, used to scan %c
+
 class CharScanner extends Percent {
+  /// Creates a scanner which scans one or more characters.
+  /// Not skipping white spaces.
   const CharScanner({
     super.width,
     required super.ignore,

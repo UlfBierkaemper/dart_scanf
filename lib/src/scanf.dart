@@ -1,9 +1,27 @@
 part of '../scanf.dart';
 
+/// A "scanf"-like parser.
+///
+/// Example usage:
+/// ```dart
+/// final scanf = ScanF('Pi: %f, Int=%i, Octal=%o %[^:]:%f%%, %[a-c]%s');
+/// final result =
+///     scanf.match('Pi: 3.14, Int=0xCAFEBABE, Octal=755 Progress:34.2%, abcdef');
+/// print('$result');
+/// ```
+///
+/// The pattern is "compiled" into a list of scanners to improve
+/// the scan speed.
+
 class ScanF {
+  /// The inital pattern string
   final String pattern;
+
+  /// List of scanners to improve speed, see constructor
   final specs = <Scanner>[];
 
+  /// Creates a ScanF scanner with the given pattern string.
+  /// The pattern string is "compiled" into a list of scanners.
   ScanF(this.pattern) {
     final text = <int>[];
     int i = 0, c = 0;
@@ -125,8 +143,7 @@ class ScanF {
 
         case codeCapitalE:
         case codeLowerCaseE:
-          specs
-              .add(RealScanner(scientific: true, width: width, ignore: ignore));
+          specs.add(RealScanner(scientific: true, width: width, ignore: ignore));
           getCh();
           return true;
 
@@ -183,6 +200,8 @@ class ScanF {
     while (compile()) {}
   }
 
+  /// Reads the givens text with the "compiled" scanners
+  /// and returns a list of corresponding matches.
   List match(String text) {
     final chars = CharGet(text);
     final matches = <Object>[];

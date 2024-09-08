@@ -1,6 +1,9 @@
 part of '../scanf.dart';
 
+/// String scanner, used to scan %s
+
 class StringScanner extends Percent {
+  /// Creates a StringScanner which skips white spaces before scanning.
   const StringScanner({
     super.width,
     required super.ignore,

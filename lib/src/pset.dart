@@ -1,9 +1,15 @@
 part of '../scanf.dart';
 
+/// Character set scanner, used to scan %[...]
+
 class SetScanner extends Percent {
+  /// List of allowed characters
   final Set<int> scanset;
+
+  /// True if characters should be ignored
   final bool reject;
 
+  /// Generative constructor
   const SetScanner({
     required this.scanset,
     this.reject = false,

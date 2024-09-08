@@ -1,6 +1,10 @@
 part of '../scanf.dart';
 
+/// Integer number scanner, used for %i.
+/// Accepts hexadecimal values.
+
 class IntScanner extends NumberScanner {
+  /// Generative constructor, forwards to super
   IntScanner({
     super.width,
     required super.ignore,

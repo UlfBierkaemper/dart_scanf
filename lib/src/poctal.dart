@@ -1,6 +1,9 @@
 part of '../scanf.dart';
 
+/// Explicite octal number scanner, used for %o
+
 class OctalScanner extends NumberScanner {
+  /// Generative constructor, forwards to super
   const OctalScanner({
     super.width,
     required super.ignore,

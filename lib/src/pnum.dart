@@ -1,11 +1,15 @@
 part of '../scanf.dart';
 
+/// Base class for all number scanners
+
 abstract class NumberScanner extends Percent {
+  /// Creates a number scanner with the given maximum amount of digits
   const NumberScanner({
     super.width,
     required super.ignore,
   });
 
+  /// Scans the sign of the value. Returns "true" if negative.
   bool negative(CharGet chars) {
     switch (chars.ch) {
       case codeMinus:
@@ -21,6 +25,7 @@ abstract class NumberScanner extends Percent {
     }
   }
 
+  /// Scans a number and returns its value or "null" if no number is scanned.
   int? number(CharGet chars, int base) {
     int digit = nextDigit(chars, base);
     if (digit < 0) {

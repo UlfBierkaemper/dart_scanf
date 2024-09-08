@@ -1,8 +1,14 @@
 part of '../scanf.dart';
 
+/// Floating point number scanner, used for %f or %e
+
 class RealScanner extends Percent {
+  /// Enabled scanning of exponential postfixes.
+  /// Example: 1.234E-4
   final bool scientific;
 
+  /// Generative constructor, forwards to super
+  /// The "scientific" boolean enables the scanning of exponential postfixes
   const RealScanner({
     this.scientific = false,
     super.width,
@@ -46,7 +52,7 @@ class RealScanner extends Percent {
         }
       }
       double result = mantissa.toDouble();
-      if (chars.ch == codeCapitalE || chars.ch == codeLowerCaseE) {
+      if (scientific && chars.ch == codeCapitalE || chars.ch == codeLowerCaseE) {
         chars.getCh();
         w--;
         int value = 0;

@@ -1,6 +1,9 @@
 part of '../scanf.dart';
 
+/// Simple white space scanner, used to skip white spaces
+
 class WhiteSpaceScanner extends Scanner {
+  /// Generative constructor
   const WhiteSpaceScanner();
 
   @override

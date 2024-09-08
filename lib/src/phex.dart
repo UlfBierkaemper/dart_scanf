@@ -1,6 +1,9 @@
 part of '../scanf.dart';
 
+/// Explicite hexadecimal scanner, used for %x or %X
+
 class HexScanner extends NumberScanner {
+  /// Generative constructor, forwards to super
   const HexScanner({
     super.width,
     required super.ignore,
