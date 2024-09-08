@@ -1,3 +1,8 @@
+## 1.1.2
+
+* Negative flag fix
+* Test improved
+
 ## 1.1.1
 
 * Code coverage added

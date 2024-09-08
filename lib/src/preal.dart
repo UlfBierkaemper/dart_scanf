@@ -52,8 +52,7 @@ class RealScanner extends Percent {
         }
       }
       double result = mantissa.toDouble();
-      if (scientific && chars.ch == codeCapitalE ||
-          chars.ch == codeLowerCaseE) {
+      if (scientific && chars.ch == codeCapitalE || chars.ch == codeLowerCaseE) {
         chars.getCh();
         w--;
         int value = 0;
@@ -97,7 +96,7 @@ class RealScanner extends Percent {
           result = exponent < 0 ? result / t : result * t;
         }
       }
-      addMatch(matches, result);
+      addMatch(matches, negative ? -result : result);
       return true;
     }
     return false;
