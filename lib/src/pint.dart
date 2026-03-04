@@ -28,12 +28,12 @@ class IntScanner extends NumberScanner {
     final value = number(chars, base);
     if (value == null) {
       if (zero) {
-        matches.add(0);
+        addMatch(matches, 0);
         return true;
       }
       return false;
     }
-    matches.add(neg ? -value : value);
+    addMatch(matches, neg ? -value : value);
     return true;
   }
 }

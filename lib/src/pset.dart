@@ -19,7 +19,7 @@ class SetScanner extends Percent {
 
   @override
   bool scan(CharGet chars, List matches) {
-    bool valid(int ch) => scanset.contains(ch) ^ reject;
+    bool valid(int ch) => ch > 0 && (scanset.contains(ch) ^ reject);
 
     final codeUnits = <int>[];
     int w = width;

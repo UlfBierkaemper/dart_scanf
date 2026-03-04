@@ -23,7 +23,7 @@ class HexScanner extends NumberScanner {
     if (value == null) {
       return false;
     }
-    matches.add(neg ? -value : value);
+    addMatch(matches, neg ? -value : value);
     return true;
   }
 }

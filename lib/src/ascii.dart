@@ -378,8 +378,8 @@ const int codePipe = 124;
 /// Ascii code RIGHTBRACE
 const int codeRightBrace = 125;
 
-/// Ascii code HOME
-const int codeHome = 126;
+/// Ascii code TILDE
+const int codeTilde = 126;
 
 /// Ascii code DEL
 const int codeDel = 127;

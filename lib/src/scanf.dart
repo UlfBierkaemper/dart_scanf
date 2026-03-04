@@ -88,7 +88,6 @@ class ScanF {
             while (l <= c) {
               chars.add(l++);
             }
-            l = c;
 
           case codeRightBracket:
             rightBracket();
